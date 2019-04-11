@@ -1,0 +1,37 @@
+<?<?xml version="1.0"?>
+    <robot name="custom_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+        <xacro:include filename="$(find custom_robot)/urdf/custom_robot.gazebo"/>
+        <link name="base"></link>
+        <joint name="base_joint" type="fixed">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <parent link="base"/>
+            <child link="base_plate"/>
+        </joint>
+        <link name="base_plate">
+            <inertial>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <mass value="0.0"/>
+                <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+            </inertial>
+            <visual name="">
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="0.0 0.0 0.0"/>
+                </geometry>
+                <material name="">
+                    <color rgba="1.0 0.0 0.0 1.0"/>
+                    <texture filename=""/>
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="0.0 0.0 0.0"/>
+                </geometry>
+            </collision>
+        </link>
+
+        
+    </robot>
+
+>

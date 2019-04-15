@@ -372,14 +372,6 @@
 			</profile_COMMON>
 		</effect>
 	</library_effects>
-	<library_images>
-		<image id="ID23" name="Img_1_ENVIRONMENT-F36F8E54-5909-41d6-9FC3-020CB8A46593.png">
-			<init_from>file:///C:\Users\leach\AppData\Roaming\SimLab\SimLab Collada From Inventor 2019\data\Imported_Textures\14\DWF\SimLabDWFFile\ENVIRONMENT-F36F8E54-5909-41d6-9FC3-020CB8A46593.png</init_from>
-		</image>
-		<image id="ID26" name="Img_2_THREAD-926F76CE-BF50-4c7a-A889-CF4CAA97EB5E.png">
-			<init_from>file:///C:\Users\leach\AppData\Roaming\SimLab\SimLab Collada From Inventor 2019\data\Imported_Textures\14\DWF\SimLabDWFFile\THREAD-926F76CE-BF50-4c7a-A889-CF4CAA97EB5E.png</init_from>
-		</image>
-	</library_images>
 	<scene>
 		<instance_visual_scene url="#Scene"/>
 	</scene>

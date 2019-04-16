@@ -112,7 +112,7 @@
 				</technique_common>
 			</optics>
 			<extra>
-				<technique  >
+				<technique>
 					<camera_target type="float">0.025 -0.005 0.05</camera_target>
 				</technique>
 			</extra>

@@ -1,0 +1,6 @@
+<launch>
+	<!-- !! This line finds the base gazebo empty world and loads it  -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+	<arg name="world_name" value="$(find wheel_bot_gazebo)/worlds/wheel_bot.world"/>
+	</include>
+</launch>

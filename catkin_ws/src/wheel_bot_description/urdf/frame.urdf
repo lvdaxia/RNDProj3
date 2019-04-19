@@ -1,9 +1,9 @@
-	<?<?xml version="1.0"?>
+	<?xml version="1.0"?>
 	<robot name="wheel_bot">
 		<link name="base_link">
 			<visual>
 				<geometry>
-					<cylinder radius="0.6" length="0.2"/>
+					<mesh filename="package://wheel_bot_description/meshes/BasePlate.dae" />
 				</geometry>
 			</visual>
 		</link>

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 	<robot name="wheel_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+		<xacro:include filename="$(find wheel_bot_description)/urdf/frame.gazebo"/>
 		<link name="base_link"></link>
 		<link name="base_plate_link">
 			<inertial>

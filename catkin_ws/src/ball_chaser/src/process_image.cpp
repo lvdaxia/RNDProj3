@@ -35,17 +35,17 @@ void process_image_callback(const sensor_msgs::Image img)
             ROS_INFO("Pixel:[%i]", pixel);
             if(col < img.width*0.3333f){
                 ROS_INFO("Turning Right");
-                drive_robot(0.0, 0.5);
+                drive_robot(-0.5f, 0);
                 stop_driving = false;
             }
-            else if((col > img.height * 0.33333f) && (col < img.height * 0.66666f)){
+            else if((col > img.width* 0.33333f) && (col < img.width* 0.66666f)){
                 ROS_INFO("Driving Straight");
-                drive_robot(1.0, 0.0);
+                drive_robot(0, -5.0f);
                 stop_driving = false;
             }
             else{
-                ROS_INFO("Driving Left");
-                drive_robot(0.0, -0.5);
+                ROS_INFO("Turning Left");
+                drive_robot(0.5f, 0);
                 stop_driving = false;
             }
             break;

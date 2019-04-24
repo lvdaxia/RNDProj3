@@ -1,0 +1,11 @@
+<launch>
+	<!-- !! This line finds the base gazebo empty world and loads it  -->
+	<include file="$(find wheel_bot_gazebo)/launch/robot_description.launch"/>
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+	<arg name="world_name" value="$(find my_robot)/worlds/wheel_bot.world"/>
+	</include>
+	<!-- <param name="robot_description" command="$(find xacro)/xacro.py $(find pr2_description)/robots/pr2.urdf.xacro"/> -->
+	<param name="robot_description" command="$(find xacro)/xacro $(find my_robot)/urdf/frame.xacro" />
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model my_robot"/>
+	<node name="rviz" pkg="rviz" type="rviz" respawn="false"/>
+</launch>

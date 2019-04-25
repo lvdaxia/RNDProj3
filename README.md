@@ -22,8 +22,8 @@ This repository contains previous code used in the "Go Chase It!" project and wi
                 ```
         * Insert new line below line 3:
             *   Add the two below lines
-            ```c
+                ```c
                 #define png_infopp_NULL (png_infopp)NULL
                 #define int_p_NULL (int*)NULL
-            ```
+                ```
 

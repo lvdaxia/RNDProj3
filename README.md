@@ -12,9 +12,18 @@ This repository contains previous code used in the "Go Chase It!" project and wi
             *   from: `node->Init(world->GetName());`
             *   to: `node->Init(world->Name());`
         *   Line 91:
-            *   from: `gazebo::physics::PhysicsEnginePtr engine = world->GetPhysicsEngine();`
-            *   to: `gazebo::physics::PhysicsEnginePtr engine = world->Physics();`
+            *   from:
+                ```c
+                gazebo::physics::PhysicsEnginePtr engine = world->GetPhysicsEngine();
+                ```
+            *   to: 
+                ```c
+                gazebo::physics::PhysicsEnginePtr engine = world->Physics();
+                ```
         * Insert new line below line 3:
             *   Add the two below lines
-                `   #define png_infopp_NULL (png_infopp)NULL`
-                `   #define int_p_NULL (int*)NULL`
+            ```c
+                #define png_infopp_NULL (png_infopp)NULL
+                #define int_p_NULL (int*)NULL
+            ```
+

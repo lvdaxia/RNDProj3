@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <tuple>
+#include <vector>
 using namespace std;
 
 double f(double mu, double sigma2, double x){
@@ -30,20 +31,33 @@ tuple<double, double> state_prediction(double prior_mean, double prior_variance,
 
 
 int main(){
-	double measurements[5] = {5, 6, 7, 9, 10};
+	// ? The measurement values to feed into the measurement update step
+	vector<double> measurements = {5, 6, 7, 9, 10};
 	double measurement_sig = 4;
-	
-	double motion[5] = {1, 1, 2, 1, 1};
+	// ? The motion values to feed into the state prediction step
+	vector<double> motion = {1,1,2,1,1};
 	double motion_sig = 2;
-	
+	// * Initial state	
 	double mu = 0;
 	double sig = 1000;
 	// TODO: Put code below this
 	// TODO: Loop through all the measurements
-		// TODO: Apply a measurement update
-		cout << "update:[" << mu << "][" << sig << "]" << endl;
-		// TODO: Apply a state prediction
-		cout << "update:[" << mu << "][" << sig << "]" << endl;
+	tuple<double, double> output_placeholder;
+	// ? My understanding of the Kalman Filter is to perform the measurement update
+	// ? then perform the state prediction and then feed these values back into mu and sig
+	for(int i = 0; i < measurements.size(); i++)
+	{
+		tie(mu, sig) = measurement_update(mu, sig, measurements[i], measurement_sig);
+	cout << "update: [" << mu << ", " << sig << "]" << endl;
+		// cout << "measurement mean: " << mu << endl;
+		// cout << "measurement variance: " << sig << endl;
+		tie(mu, sig) = state_prediction(mu, sig, motion[i], motion_sig);
+	cout << "predict: [" << mu << ", " << sig << "]" << endl;
+		// cout << "state mean: " << mu << endl;
+		// cout << "state variance: " << sig << endl;
+	}
+	// tie(mu, sig) = measurement_update(20, 9, 30, 3);	
+	// tie(mu, sig) = state_prediction(mu, sig, 7.5, 5);
 
 	return 0;
 }

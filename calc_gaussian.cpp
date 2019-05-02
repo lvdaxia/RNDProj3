@@ -5,6 +5,7 @@
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/LU>
 using namespace std;
+using namespace Eigen;
 
 double f(double mu, double sigma2, double x){
 	//Use mu, sigma 2 and x to code the 1-dimensional Gaussian 
@@ -30,7 +31,7 @@ tuple<double, double> state_prediction(double prior_mean, double prior_variance,
 	double new_var = prior_variance + motion_variance;
 	return  make_tuple(new_mean, new_var);
 }
-tuple<MatrixXf, MatrixXf> multi_measurement_update(){
+tuple<MatrixXf, MatrixXf> kalman_filter(MatrixXf x, MatrixXf P, MatrixXf u, MatrixXf F, MatrixXf H, MatrixXf R, MatrixXf I){
 	
 }
 

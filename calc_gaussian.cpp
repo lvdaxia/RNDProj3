@@ -32,8 +32,10 @@ tuple<double, double> state_prediction(double prior_mean, double prior_variance,
 	return  make_tuple(new_mean, new_var);
 }
 tuple<MatrixXf, MatrixXf> kalman_filter(MatrixXf x, MatrixXf P, MatrixXf u, MatrixXf F, MatrixXf H, MatrixXf R, MatrixXf I){
-	
-}
+
+	for(int i = 0; n < sizeof(measurements)/sizeof(measurements[0]); n++){
+
+	}
 
 
 int main(){

@@ -2,6 +2,8 @@
 #include <math.h>
 #include <tuple>
 #include <vector>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/LU>
 using namespace std;
 
 double f(double mu, double sigma2, double x){
@@ -27,6 +29,9 @@ tuple<double, double> state_prediction(double prior_mean, double prior_variance,
 	// TODO: Code the measurement update variance function sigma squared
 	double new_var = prior_variance + motion_variance;
 	return  make_tuple(new_mean, new_var);
+}
+tuple<MatrixXf, MatrixXf> multi_measurement_update(){
+	
 }
 
 
